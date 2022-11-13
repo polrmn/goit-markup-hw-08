@@ -1,0 +1,84 @@
+body {
+    font-family: $main-font , $reserve-font;
+    color: $brand-color-first;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.navigation,
+.navigation__item,
+.contacts,
+.contacts__item,
+.tel-link,
+.advantages__list,
+.advantages__item,
+.work-images,
+.work-item,
+.team__members-list,
+.team__member,
+.address-list,
+.footer__address-item,
+.filter-list,
+.portfolio__filter-item,
+.projects,
+.portfolio__project-item {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.logo,
+.navigation__link,
+.footer__link,
+.logo-footer,
+.contacts__link,
+.social-list__link {
+    text-decoration: none;
+    color: $brand-color-first;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a {
+    &:hover, &:focus {
+        color: $brand-color-activity;
+    }
+}
+
+.hero__button,
+.portfolio__filter-button,
+.modal__close-button,
+.modal__submit-button,
+.subscription__button {
+    border: none;
+    cursor: pointer;
+}
+
+.icon {
+     fill: currentColor;
+}
+
+.section {
+    padding: 94px 0;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}

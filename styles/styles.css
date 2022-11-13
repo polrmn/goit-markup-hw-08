@@ -150,7 +150,7 @@ a:hover, a:active, a:focus {
     fill: currentColor;
 }
 
-/* ШАПКА */
+/* HERO */
 .hero {
     max-width: 1600px;
     width: 100%;
@@ -269,7 +269,7 @@ a:hover, a:active, a:focus {
 .work__item{
     position: relative;
 }
-.work__item img {
+.work__image {
     display: block;
 }
 .work__discription {

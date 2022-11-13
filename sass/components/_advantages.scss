@@ -1,0 +1,46 @@
+/* ОСОБЛИВОСТІ */
+
+.advantages {
+    background-color: $brand-color-main;
+}
+
+.advantages__container {
+    display: flex;
+    justify-content: center;
+}
+
+.advantages__list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.advantages__item {
+    max-width: 270px;
+    width: 100%;
+}
+
+.advantages__point {
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+}
+
+.advantages__desc {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $brand-color-text;
+}
+
+.advantages__icon-container {
+    padding: 25px 100px;
+    margin-bottom: 30px;
+    background-color: $brand-color-third;
+    border-radius: 4px;
+}
