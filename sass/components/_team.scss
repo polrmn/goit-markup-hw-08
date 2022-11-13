@@ -11,6 +11,14 @@
     gap: 50px;
 }
 
+.team__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
 .team__members-list {
     display: flex;
     gap: 30px;

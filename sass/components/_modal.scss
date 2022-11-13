@@ -8,12 +8,10 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
-    /* visibility: visible; */
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden {
-    /* visibility: hidden; */
     opacity: 0;
     pointer-events: none;
 }
@@ -26,17 +24,19 @@
     padding: 40px;
     max-width: 521px;
     width: 100%;
-    background-color: var(--brand-color-main);
+    background-color: $brand-color-main;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .modal-container.is-hidden & {
+        transform: scale(0.8) translate(-50%, -50%);
+    }
 }
 
-.modal-container.is-hidden .modal {
-    transform: scale(0.8) translate(-50%, -50%);
-}
+
 
 .modal__close-button {
     position: absolute;
@@ -49,13 +49,13 @@
     justify-content: center;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    background-color: var(--brand-color-main);
+    background-color: $brand-color-main;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.modal__close-button:hover,
-.modal__close-button:focus {
-    color: var(--brand-color-activity);
+    &:hover,
+    &:focus {
+        color: $brand-color-activity;
+    }
 }
 
 .modal__title {
@@ -65,21 +65,21 @@
     line-height: 1.15;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--brand-color-first);
-}
-
-.modal__label--textarea {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    color: $brand-color-first;
 }
 
 .modal__label {
     font-size: 12px;
     line-height: 1.1667;
     letter-spacing: 0.01em;
-    color: var(--brand-color-text)
+    color: $brand-color-text;
+
+    &--textarea {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
 }
 
 .modal__icon-container {
@@ -91,14 +91,10 @@
     margin-bottom: 10px;
     margin-top: 4px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.modal__icon-container:focus-within {
-    border-color: var(--brand-color-activity);
-}
-
-.modal__icon-container:focus-within .modal__icon {
-    fill: var(--brand-color-activity);
+    &:focus-within {
+        border-color: $brand-color-activity;
+    }
 }
 
 .modal__icon {
@@ -107,6 +103,10 @@
     left: 0;
     transform: translate(12px, -50%);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .modal__icon-container:focus-within & {
+        fill: $brand-color-activity;
+    }
 }
 
 .modal__input {
@@ -133,11 +133,13 @@
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
     transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+        outline: 1px solid $brand-color-activity;
+    }
 }
 
-.modal__textarea:focus {
-    outline: 1px solid var(--brand-color-activity);
-}
+
 
 .modal__checkbox-label {
     display: flex;
@@ -149,7 +151,7 @@
     font-size: 14px;
     line-height: 1.7143;
     letter-spacing: 0.03em;
-    color: var(--brand-color-text);
+    color: $brand-color-text;
 }
 
 .modal__checkbox {
@@ -162,23 +164,23 @@
     width: 16px;
     height: 15px;
     box-sizing: border-box;
-    fill: var(--brand-color-main);
+    fill: $brand-color-main;
     border: 2px solid;
-    border-color: var(--brand-color-first);
+    border-color: $brand-color-first;
     border-radius: 2px;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .modal__checkbox-label .modal__checkbox:checked+& {
+        fill: $brand-color-activity;
+        border: none;
+    }
 }
 
 .modal__rules-link {
     display: block;
-    color: var(--brand-color-activity);
+    color: $brand-color-activity;
     display: block;
     margin-left: 3px;
-}
-
-.modal__checkbox-label .modal__checkbox:checked+.modal__icon-check {
-    fill: var(--brand-color-activity);
-    border: none;
 }
 
 .modal__submit-button {
@@ -188,7 +190,7 @@
     height: 100%;
     margin: 0 auto;
     padding: 10px 52px;
-    background-color: var(--brand-color-activity);
+    background-color: $brand-color-activity;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.875;
@@ -196,7 +198,7 @@
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-    color: var(--brand-color-main);
+    color: $brand-color-main;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 }
