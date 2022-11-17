@@ -266,6 +266,9 @@ body {
   font-family: "Roboto", sans-serif;
   color: #212121;
 }
+body.is-open {
+  overflow: hidden;
+}
 
 *,
 *::before,
@@ -397,7 +400,7 @@ a:hover, a:focus {
 }
 @media screen and (max-width: 767px) {
   .menu-container.is-open {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     display: -webkit-box;
@@ -523,6 +526,11 @@ a:hover, a:focus {
   height: 40px;
   margin-left: auto;
   background-color: inherit;
+}
+.header__menu-button.is-open {
+  position: absolute;
+  top: 10px;
+  right: 15px;
 }
 .header__menu-button:hover, .header__menu-button:focus {
   color: #2196F3;
@@ -755,7 +763,7 @@ a:hover, a:focus {
   border-radius: 0px 0px 4px 4px;
   padding-bottom: 24px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .team__member {
     margin-bottom: 30px;
   }

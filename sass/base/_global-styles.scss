@@ -1,6 +1,9 @@
 body {
     font-family: $main-font , $reserve-font;
     color: $brand-color-first;
+    &.is-open {
+        overflow: hidden;
+    }
 }
 
 *,

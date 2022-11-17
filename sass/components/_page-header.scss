@@ -36,7 +36,7 @@
     @media screen and (max-width: 767px) {
             // height: 40px;
         &.is-open {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             display: flex;
@@ -173,7 +173,14 @@
     height: 40px;
     margin-left: auto;
     background-color: inherit;
-    &:hover, &:focus{
+
+    &.is-open {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+
+    &:hover, &:focus {
         color: $brand-color-activity;
     }
     @media screen and (min-width: 768px) {
