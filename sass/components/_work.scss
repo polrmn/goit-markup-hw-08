@@ -1,6 +1,9 @@
 /* ЧИМ МИ ЗАЙМАЄМОСЬ */
 
 .work {
+    @media screen and (max-width: 767px) {
+    display: none;
+    }
     background-color: $brand-color-main;
     padding: 0 0 94px;
 }

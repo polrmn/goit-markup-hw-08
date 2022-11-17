@@ -15,36 +15,52 @@
         <!-- LOGO -->
         <a class="logo" href="index.html"><span class="logo__web-word">Web</span>Studio</a>
         <!-- NAVIGATION -->
-        <nav>
-          <ul class="navigation">
-            <li class="navigation__item">
-              <a class="navigation__link navigation__link--current" href="index.html">Студія</a> 
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="portfolio.html">Портфоліо</a>  
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">Контакти</a>
-            </li>
-          </ul>
-        </nav>
-        <!-- CONTACTS -->
-        <ul class="contacts">
-          <li class="contacts__item">
-            <a class="contacts__link" href="mailto:info@devstudio.com">
-              <svg class="icon" width="16" height="12">
-                <use xlink:href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a>
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__link" href="tel:+380961111111">
-              <svg class="icon" width="10" height="16">
-                <use xlink:href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a>
-          </li>
-        </ul> 
+        <div class="menu-container" data-menu>
+          <nav>
+            <ul class="navigation">
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--current" href="index.html">Студія</a> 
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="portfolio.html">Портфоліо</a>  
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- CONTACTS -->
+          <div class="contacts-container">
+            <ul class="contacts">
+              <li class="contacts__item">
+                <a class="contacts__link" href="mailto:info@devstudio.com">
+                  <svg class="icon contacts__icon" width="16" height="12">
+                    <use xlink:href="./images/icons.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link contacts__link--tel" href="tel:+380961111111">
+                  <svg class="icon contacts__icon" width="10" height="16">
+                    <use xlink:href="./images/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a>
+              </li>
+            </ul>
+            <ul class="contacts__social-list">
+              <li class="contacts__social-item"><a href="#" class="contacts__social-link">Instagram</a></li>
+              <li class="contacts__social-item"><a href="#" class="contacts__social-link">Twitter</a></li>
+              <li class="contacts__social-item"><a href="#" class="contacts__social-link">Facebook</a></li>
+              <li class="contacts__social-item"><a href="#" class="contacts__social-link">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+        <button type="button" class="header__menu-button" aria-expended="false" data-menu-button>
+          <svg class="icon header__menu-icon" width="40" height="40" aria-label="mobile-menu switcher">
+            <use class="header__icon-menu" xlink:href="./images/icons.svg#icon-menu-open"></use>
+            <use class="header__icon-cross" xlink:href="./images/icons.svg#icon-menu-close"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -145,7 +161,7 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__members-list">
             <li class="team__member">
-              <img
+              <img class="team__member-foto"
               src="images/img4.jpg"
               alt="Чоловік з темним волоссям в окулярах і темній рубашці"
               width="270"
@@ -185,7 +201,7 @@
             </li>
             
             <li class="team__member">
-              <img
+              <img class="team__member-foto"
               src="images/img5.jpg"
               alt="Жінка з світлим волоссям в окулярах і темному жакеті"
               width="270"
@@ -225,7 +241,7 @@
             </li>
               
             <li class="team__member">
-              <img
+              <img class="team__member-foto"
               src="images/img6.jpg"
               alt="Чоловік з темним волоссям в світлій рубашці"
               width="270"
@@ -264,7 +280,7 @@
               </ul>
             </li>
             <li class="team__member">
-              <img
+              <img class="team__member-foto"
               src="images/img7.jpg"
               alt="Чоловік з темним волоссям в окулярах і футболці"
               width="270"
@@ -457,5 +473,7 @@
   </div>
 
   <script src="./modal.js"></script>
+
+  <script src="./mobile-menu.js"></script>
   </body>
 </html>

@@ -63,7 +63,8 @@ a {
 .portfolio__filter-button,
 .modal__close-button,
 .modal__submit-button,
-.subscription__button {
+.subscription__button,
+.header__menu-button {
     border: none;
     cursor: pointer;
 }
@@ -73,11 +74,21 @@ a {
 }
 
 .section {
-    padding: 94px 0;
+    // padding: 94px 0;
+    padding: 60px 0;
 }
 
 .container {
-    max-width: 1200px;
+    // max-width: 1200px;
+    @media screen and (max-width: 767px), (width:767px){
+        max-width: 480px;
+    }
+    @media screen and (min-width: 768px) {
+        max-width: 768px;
+    }
+    @media screen and (min-width: 1600px) {
+        max-width: 1200px;
+    }
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;

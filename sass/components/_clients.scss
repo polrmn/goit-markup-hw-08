@@ -7,13 +7,20 @@
 .clients__conteiner {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    // gap: 50px;
+    gap: 30px;
 }
 
 .clients__title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.1667;
+    // font-weight: 700;
+    // font-size: 36px;
+    // line-height: 1.1667;
+    // text-align: center;
+    // letter-spacing: 0.03em;
+    // color: $brand-color-first;
+
+    font-size: 28px;
+    line-height: 1.1786;
     text-align: center;
     letter-spacing: 0.03em;
     color: $brand-color-first;
@@ -22,6 +29,7 @@
 .clients__list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
@@ -33,7 +41,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
+    // width: 170px;
+    width: 210px;
     height: 92px;
     color: $c-icons;
     border: 1px solid #AFB1B8;
