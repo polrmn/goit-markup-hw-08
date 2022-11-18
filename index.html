@@ -129,6 +129,7 @@
           <ul class="work__list">
             <li class="work__item">
               <img class="work__image"
+              srcset="./images/img1.jpg 1x, ./images/img1@2x.jpg 2x"
               src="images/img1.jpg"
               alt="Працівник пише код проекту за його блок-схемою"
               width="370"
@@ -137,6 +138,7 @@
             </li>
             <li class="work__item">
               <img class="work__image"
+              srcset="./images/img2.jpg 1x, ./images/img2@2x.jpg 2x"
               src="images/img2.jpg"
               alt="Працівник виконує адаптивну верстку"
               width="370"
@@ -145,6 +147,7 @@
             </li>
             <li class="work__item">
               <img class="work__image"
+              srcset="./images/img3.jpg 1x, ./images/img3@2x.jpg 2x"
               src="images/img3.jpg"
               alt="Працівник вибирає кольори з палітри на планшеті"
               width="370"
@@ -161,11 +164,12 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__members-list">
             <li class="team__member">
-              <img class="team__member-foto"
-              src="images/img4.jpg"
-              alt="Чоловік з темним волоссям в окулярах і темній рубашці"
-              width="270"
-                />
+              <picture>
+                <source srcset="./images/img4-mobile.jpg 1x, ./images/img4-mobile@2x.jpg 2x" media="(max-width:767px)"/>
+                <source srcset="./images/img4-desktop.jpg 1x, ./images/img4-desktop@2x.jpg 2x" media="(min-width:1200px)" />
+                <source srcset="./images/img4-tablet.jpg 1x, ./images/img4-tablet@2x.jpg 2x" media="(min-width:768px)"/>
+                <img src="./images/img4-mobile.jpg" alt="Чоловік з темним волоссям в окулярах і темній рубашці"/>
+              </picture>
               <h3 class="team__name">Ігор Дем'яненко</h3> 
               <p class="team__speciality">Product Designer</p>
               <ul class="social-list">
@@ -201,11 +205,12 @@
             </li>
             
             <li class="team__member">
-              <img class="team__member-foto"
-              src="images/img5.jpg"
-              alt="Жінка з світлим волоссям в окулярах і темному жакеті"
-              width="270"
-              />
+              <picture>
+                <source srcset="./images/img5-mobile.jpg 1x, ./images/img5-mobile@2x.jpg 2x" media="(max-width:767px)" />
+                <source srcset="./images/img5-desktop.jpg 1x, ./images/img5-desktop@2x.jpg 2x" media="(min-width:1200px)" />
+                <source srcset="./images/img5-tablet.jpg 1x, ./images/img5-tablet@2x.jpg 2x" media="(min-width:768px)" />
+                <img src="./images/img5-mobile.jpg" alt="Чоловік з темним волоссям в окулярах і темній рубашці" />
+              </picture>
               <h3 class="team__name">Ольга Рєпіна</h3> 
               <p class="team__speciality">Frontend Developer</p>
               <ul class="social-list">
@@ -241,11 +246,12 @@
             </li>
               
             <li class="team__member">
-              <img class="team__member-foto"
-              src="images/img6.jpg"
-              alt="Чоловік з темним волоссям в світлій рубашці"
-              width="270"
-              />
+              <picture>
+                <source srcset="./images/img6-mobile.jpg 1x, ./images/img6-mobile@2x.jpg 2x" media="(max-width:767px)" />
+                <source srcset="./images/img6-desktop.jpg 1x, ./images/img6-desktop@2x.jpg 2x" media="(min-width:1200px)" />
+                <source srcset="./images/img6-tablet.jpg 1x, ./images/img6-tablet@2x.jpg 2x" media="(min-width:768px)" />
+                <img src="./images/img6-mobile.jpg" alt="Чоловік з темним волоссям в окулярах і темній рубашці" />
+              </picture>
               <h3 class="team__name">Микола Тарасов</h3>
               <p class="team__speciality">Marketing</p>
               <ul class="social-list">
@@ -280,11 +286,12 @@
               </ul>
             </li>
             <li class="team__member">
-              <img class="team__member-foto"
-              src="images/img7.jpg"
-              alt="Чоловік з темним волоссям в окулярах і футболці"
-              width="270"
-              />
+              <picture>
+                <source srcset="./images/img7-mobile.jpg 1x, ./images/img7-mobile@2x.jpg 2x" media="(max-width:767px)" />
+                <source srcset="./images/img7-desktop.jpg 1x, ./images/img7-desktop@2x.jpg 2x" media="(min-width:1200px)" />
+                <source srcset="./images/img7-tablet.jpg 1x, ./images/img7-tablet@2x.jpg 2x" media="(min-width:768px)" />
+                <img src="./images/img7-mobile.jpg" alt="Чоловік з темним волоссям в окулярах і темній рубашці" />
+              </picture>
               <h3 class="team__name">Михайло Єрмаков</h3>
               <p class="team__speciality">UI Designer</p>
               <ul class="social-list">

@@ -418,12 +418,13 @@ a:hover, a:focus {
 }
 @media screen and (max-width: 767px) {
   .menu-container.is-open {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    gap: 30px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -432,9 +433,10 @@ a:hover, a:focus {
         -ms-flex-pack: justify;
             justify-content: space-between;
     background-color: #fff;
-    width: 100%;
-    height: 100%;
-    padding: 48px 40px 48px 15px;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+    overflow-y: auto;
   }
 }
 @media screen and (min-width: 768px) {
@@ -583,6 +585,7 @@ a:hover, a:focus {
   list-style: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 10px;
 }
 @media screen and (min-width: 768px) {
   .contacts__social-list {
@@ -593,9 +596,6 @@ a:hover, a:focus {
 .contacts__social-item:not(:last-child) {
   padding-right: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
-}
-.contacts__social-item:not(:first-child) {
-  padding-left: 10px;
 }
 
 .contacts__social-link {
@@ -643,23 +643,45 @@ a:hover, a:focus {
   max-width: 480px;
   width: 100%;
   margin: 0 auto;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(150, 150, 150, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../images/hero-background-Img.jpg");
-  background-image: linear-gradient(rgba(150, 150, 150, 0.4), rgba(0, 0, 0, 0.4)), url("../images/hero-background-Img.jpg");
+  padding: 118px 45px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(150, 150, 150, 0.4)), to(rgba(0, 0, 0, 0.4))), url("/images/Hero-background-480.jpg");
+  background-image: linear-gradient(rgba(150, 150, 150, 0.4), rgba(0, 0, 0, 0.4)), url("/images/Hero-background-480.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 118px 45px;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(150, 150, 150, 0.4)), to(rgba(0, 0, 0, 0.4))), url("/images/Hero-background-480@2x.jpg");
+    background-image: linear-gradient(rgba(150, 150, 150, 0.4), rgba(0, 0, 0, 0.4)), url("/images/Hero-background-480@2x.jpg");
+  }
 }
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
     padding: 118px 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(150, 150, 150, 0.4)), to(rgba(0, 0, 0, 0.4))), url("/images/Hero-background-768.jpg");
+    background-image: linear-gradient(rgba(150, 150, 150, 0.4), rgba(0, 0, 0, 0.4)), url("/images/Hero-background-768.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(150, 150, 150, 0.4)), to(rgba(0, 0, 0, 0.4))), url("/images/Hero-background-768@2x.jpg");
+    background-image: linear-gradient(rgba(150, 150, 150, 0.4), rgba(0, 0, 0, 0.4)), url("/images/Hero-background-768@2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
     max-width: 1600px;
     padding: 200px 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(150, 150, 150, 0.4)), to(rgba(0, 0, 0, 0.4))), url("/images/Hero-background-1600.jpg");
+    background-image: linear-gradient(rgba(150, 150, 150, 0.4), rgba(0, 0, 0, 0.4)), url("/images/Hero-background-1600.jpg");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(150, 150, 150, 0.4)), to(rgba(0, 0, 0, 0.4))), url("/images/Hero-background-1600@2x.jpg");
+    background-image: linear-gradient(rgba(150, 150, 150, 0.4), rgba(0, 0, 0, 0.4)), url("/images/Hero-background-1600@2x.jpg");
   }
 }
 
@@ -1067,8 +1089,14 @@ a:hover, a:focus {
 
 .clients__item {
   list-style: none;
+  width: calc((100% - 30px) / 2);
 }
 @media screen and (min-width: 768px) {
+  .clients__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
   .clients__item {
     width: calc((100% - 150px) / 6);
   }
@@ -1157,6 +1185,8 @@ a:hover, a:focus {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-flex-preferred-size: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 60px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1164,6 +1194,8 @@ a:hover, a:focus {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    -ms-flex-preferred-size: initial;
+        flex-basis: initial;
   }
 }
 
@@ -1224,6 +1256,8 @@ a:hover, a:focus {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-flex-preferred-size: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 60px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1231,6 +1265,8 @@ a:hover, a:focus {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    -ms-flex-preferred-size: initial;
+        flex-basis: initial;
   }
 }
 
@@ -1253,6 +1289,13 @@ a:hover, a:focus {
   display: -ms-flexbox;
   display: flex;
   gap: 20px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .subscription {
+    -ms-flex-preferred-size: 450px;
+        flex-basis: 450px;
+  }
 }
 @media screen and (max-width: 1199px) {
   .subscription {

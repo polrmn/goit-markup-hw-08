@@ -32,11 +32,13 @@
 
     @media screen and (min-width: 768px) {
         align-items: center;
+        flex-basis: calc((100% - 60px) / 2);
     }
 
     @media screen and (min-width: 1200px) {
         // margin-right: 70px;
         align-items: flex-start;
+        flex-basis: initial;
     }
 }
 .footer__logo {
@@ -50,6 +52,7 @@
     gap: 9px;
     @media screen and (min-width: 768px) {
         align-items: center;
+        
     }
     
     @media screen and (min-width: 1200px) {
@@ -73,10 +76,12 @@
     // margin-right: 93px;
     @media screen and (min-width: 768px) {
         align-items: center;
+        flex-basis: calc((100% - 60px) / 2);
     }
 
     @media screen and (min-width: 1200px) {
         align-items: flex-start;
+        flex-basis: initial;
     }
 }
 .social-container__title{
@@ -98,6 +103,10 @@
 .subscription {
     display: flex;
     gap: 20px;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+        flex-basis: 450px;
+    }
     @media screen and (max-width: 1199px) {
         flex-direction: column;
         align-items: center;
