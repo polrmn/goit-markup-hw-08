@@ -36,6 +36,10 @@
     .modal-container.is-hidden & {
         transform: scale(0.8) translate(-50%, -50%);
     }
+    
+    @media screen and (min-width: 1200px) {
+        max-width: 528px;
+    }
 }
 
 
@@ -150,12 +154,15 @@
     align-items: center;
     cursor: pointer;
 
-    // font-size: 14px;
-    // line-height: 1.7143;
     font-size: 12px;
-    line-height: 14px;
+    line-height: 1.1667;
     letter-spacing: 0.03em;
     color: $brand-color-text;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.7143;
+    }
 }
 
 .modal__checkbox {

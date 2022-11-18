@@ -13,12 +13,31 @@
         align-items: center;
         text-align: center;
     }
+    
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        gap: 70px;
+    }
 }
 .footer__logo-address-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
     // margin-right: 94px;
+
+    @media screen and (min-width: 768px) {
+        align-items: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+        // margin-right: 70px;
+        align-items: flex-start;
+    }
 }
 .footer__logo {
     padding: 0;
@@ -29,6 +48,13 @@
     display: flex;
     flex-direction: column;
     gap: 9px;
+    @media screen and (min-width: 768px) {
+        align-items: center;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        align-items: flex-start;
+    }
 }
 .footer__link {
     font-size: 14px;
@@ -45,6 +71,13 @@
     flex-direction: column;
     gap: 20px;
     // margin-right: 93px;
+    @media screen and (min-width: 768px) {
+        align-items: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+        align-items: flex-start;
+    }
 }
 .social-container__title{
     font-weight: 700;
@@ -64,16 +97,17 @@
 
 .subscription {
     display: flex;
-    @media screen and (max-width: 767px) {
+    gap: 20px;
+    @media screen and (max-width: 1199px) {
         flex-direction: column;
         align-items: center;
     }
-    // flex-grow: 1;
-    // gap: 12px;
-    gap: 20px;
-    // align-items: flex-end;
-    // flex-wrap: wrap;
-
+    
+    @media screen and (min-width: 1200px) {
+        gap: 12px;
+        flex-grow: 1;
+        align-items: flex-end;
+    }
 }
 .subscription__label {
     display: block;
@@ -85,6 +119,12 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $brand-color-main;
+    @media screen and (min-width: 768px) {
+        text-align: center;
+    }
+    @media screen and (min-width: 1200px) {
+        text-align: start;
+    }
 }
 
 .subscription__input {  
